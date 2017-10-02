@@ -21,7 +21,7 @@
     "webdriverio": "^4.8.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "keywords": [],
   "author": "",
