@@ -4,3 +4,5 @@ outputDir/*
 errorShots/*
 allure-results/*
 screenshots/*
+
+yarn.lock
