@@ -1,12 +1,12 @@
-var path = require('path');
-var VisualRegressionCompare = require('wdio-visual-regression-service/compare');
+let path = require('path');
+let VisualRegressionCompare = require('wdio-visual-regression-service/compare');
 function getScreenshotName(basePath) {
   return function(context) {
-    var type = context.type;
-    var testName = context.test.title;
-    var browserVersion = parseInt(context.browser.version, 10);
-    var browserName = context.browser.name;
-    var browserWidth = context.meta.width;
+    let type = context.type;
+    let testName = context.test.title;
+    let browserVersion = parseInt(context.browser.version, 10);
+    let browserName = context.browser.name;
+    let browserWidth = context.meta.width;
 
     return path.join(basePath, `${testName}_${type}_${browserName}_v${browserVersion}_${browserWidth}.png`);
   };
@@ -86,7 +86,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'https://skempin.github.io/reactjs-tmdb-app/',
+    baseUrl: 'https://www.orbitz.com',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -151,9 +151,10 @@ exports.config = {
     framework: 'mocha',
     //
     // Test reporter for stdout.
+
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/testrunner/reporters.html
-    reporters: ['dot','allure','json'],
+    reporters: ['spec','dot','allure','json'],
     reporterOptions: {
         outputDir: './outputDir',
         allure: {
@@ -203,6 +204,9 @@ exports.config = {
         chai.use(chaiWebdriver(browser));
     
         global.expect = chai.expect;
+        global.assert = chai.assert;
+
+        require('babel-core/register')
     },
     //
     /**
@@ -281,4 +285,4 @@ exports.config = {
      */
     // onComplete: function(exitCode) {
     // }
-}
+};
