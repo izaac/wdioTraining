@@ -1,13 +1,19 @@
-import {flightsSection} from "../../pages/flights.section";
+import {flightsSection} from '../../pages/flights.section';
 
-describe('My React Test', function () {
+describe('My flights Test', function () {
     beforeEach(function() {
       flightsSection.open('');
     });
 
-    it('should click flights', function () {
+    it('should click flights and do a basic search', function () {
         flightsSection.clickflightsTab();
-        flightsSection.flyingFromInput.waitForVisible();
-        expect(flightsSection.flyingFromInput.isVisible()).to.eq(true);
+        flightsSection.flightOriginInput.waitForVisible();
+        expect(flightsSection.flightOriginInput.isVisible()).to.eq(true);
+        flightsSection.clickFlightTypeOneWay();
+        flightsSection.fillFlightOriginInput();
+        flightsSection.fillFlightDestinationInput();
+        flightsSection.fillFlightDepartingDate();
+        flightsSection.clickDatePickerCloseButton();
+        expect(flightsSection.clickSearchButton().resultsList.isVisible()).to.be.true;
     })
 });
