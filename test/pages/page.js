@@ -14,10 +14,6 @@ export default class Page {
         return $(`select[name=${name}]`);
     }
 
-    elementByDataTestId(testId) {
-        return $(`[data-test-id="${testId}"]`);
-    }
-
     open(path) {
         browser.url(`/${path}`);
     }
@@ -56,14 +52,6 @@ export default class Page {
 
     expectH3(header) {
         $(`h3*=${header}`).waitForVisible();
-    }
-
-    flattenArray(arr) {
-        return arr.reduce((flat, next) => flat.concat(next), []);
-    }
-
-    getSelectedTextFor(selectElement) {
-        return selectElement.$(`[value="${selectElement.getValue()}"]`).getText();
     }
 }
 
