@@ -32,7 +32,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "wdio-spec-reporter": "^0.1.2"
   }
