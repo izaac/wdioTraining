@@ -1,11 +1,11 @@
 import {flightsSection} from '../../pages/flights.section';
 
-describe('My React Test', function () {
+describe('My flights Test', function () {
     beforeEach(function() {
       flightsSection.open('');
     });
 
-    it('should click flights', function () {
+    it('should click flights and do a basic search', function () {
         flightsSection.clickflightsTab();
         flightsSection.flightOriginInput.waitForVisible();
         expect(flightsSection.flightOriginInput.isVisible()).to.eq(true);
