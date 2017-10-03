@@ -1,21 +1,13 @@
+import {flightsSection} from "../../pages/flights.section";
+
 describe('My React Test', function () {
-  beforeEach(function() {
-    browser.url('./');
-    browser.waitForVisible('[data-reactroot]');
-  })
+    beforeEach(function() {
+      flightsSection.open('');
+    });
 
-  it('should find moana', function () {
-    browser.setValue('#q', 'moana');
-
-    browser.waitForText('.tt-dropdown-menu');
-
-    browser.keys('Down arrow');
-    browser.keys('Enter');
-
-    browser.waitForVisible('h1=Moana')
-    let pageHeading = browser.getText('h1');
-    
-    expect(pageHeading).to.equal('MOANA');
-    expect(browser.getText('.tagline')).to.equal('The ocean is calling.');
-  })
-})
+    it('should click flights', function () {
+        flightsSection.clickflightsTab();
+        flightsSection.flyingFromInput.waitForVisible();
+        expect(flightsSection.flyingFromInput.isVisible()).to.eq(true);
+    })
+});
