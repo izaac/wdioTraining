@@ -16,7 +16,7 @@ install:
     - npm i
 
 script:
-    - ls -ltr **
+#    - ls -ltr **
     - npm run test-headless
 
 cache:
