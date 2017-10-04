@@ -16,8 +16,8 @@ install:
     - npm i
 
 script:
-    - ls -ltr **
-    - npm run test
+#    - ls -ltr **
+    - npm run test-headless
 
 cache:
   directories:
@@ -27,8 +27,3 @@ notifications:
     email:
         on_success: never
         on_failure: change
-
-before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3
