@@ -16,6 +16,7 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "chai-webdriverio": "^0.4.2",
+    "lodash": "^4.17.4",
     "selenium-standalone": "^6.9.0",
     "wdio-allure-reporter": "^0.1.2",
     "wdio-dot-reporter": "^0.0.9",
@@ -25,19 +26,21 @@
     "wdio-screenshot": "^0.6.0",
     "wdio-selenium-standalone-service": "0.0.9",
     "wdio-visual-regression-service": "^0.8.0",
-    "webdriverio": "^4.8.0"
+    "webdriverio": "4.8.0"
   },
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
-    "test-headless": "./node_modules/.bin/wdio wdio.conf.headless.js"
+    "test-headless": "./node_modules/.bin/wdio wdio.conf.headless.js",
+    "test-sauce": "./node_modules/.bin/wdio wdio.conf.sauce.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "devDependencies": {
     "eslint": "^4.8.0",
-    "eslint-config-airbnb-base": "^12.0.1",
+    "eslint-config-airbnb-base": "^12.0.2",
     "eslint-plugin-import": "^2.7.0",
+    "wdio-sauce-service": "^0.4.0",
     "wdio-spec-reporter": "^0.1.2"
   }
 }
