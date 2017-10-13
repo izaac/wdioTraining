@@ -6,7 +6,7 @@ addons:
     - google-chrome
     packages:
     - google-chrome-stable
-  sauce_connect: true
+  # sauce_connect: true
   jwt:
     secure: P8sk28mQJMOAOzQQWuX0ZlYQiCTzWn8oHkzvhxhbwmO5yO2D0BcGruMcyDILjecoch0Bkw9wWi2rcwitoF2wwrGD6puI1Rlxa9OPPh+qjYrFYT5K8y0UKvgEb7aTixNsk/Y+JVThdm1uY6E2tiyQWcRB7569QqOFA0UQkmZvzpeOAIJ3bO6zYrNyxvf6AXL/fN8fWR+LOlqTqMpLPm+joS1r8OUNVWeL+11XfznlY/M1cIT87uVVYQBTpbW1pW4aZ43YUqJf/rfUeEligDh/6MtXth5aJ54kQ9Kyp5ZhLAE+lMI4dDY6qTNGsoXG5vtcpST10ovFTaT0OS4SQ2yG8eS3e83osgLUWxc4JPlwbljl0i0fiv0TjnzQikRqSs86+MhbDUpEH90T1CYyX/lnE/slHimv5wiJMUaWb+um1dDaLFAtojlGWehsF8Q2pPI8XyxXwPB35vCKDO1uvoReqzpxfbSQZ5j5jGbB8cGc2qBAUHQbLW7SlfolrT63EOuScuYIVcGBUe3M7uNhT5Gw4ZOlj7UJD5kWIi3fAO19D5X+eFmzTIwPo4b7vdn/J8PzJKPhpBTujTDfWacUW9sFU5DNugMyL+znm7N7vFwlKJveaH9M87Qwtb+oxXzgDtWJqCHIGJD7QdGqsKNkzlfw+YkcLOTcfOTUr+P7011JbuY=
 language: node_js
