@@ -19,7 +19,7 @@ node_js:
 install:
 - npm i
 script:
-- npm run test-sauce
+- npm run test-headless
 cache:
   directories:
   - node_modules
