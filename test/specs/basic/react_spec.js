@@ -1,6 +1,6 @@
-import {flightsSection} from '../../pages/flights.section';
+import { flightsSection } from '../../pages/flights.section';
 
-describe('My flights Test', function () {
+describe('My flights Test', () => {
     beforeEach(function() {
       flightsSection.open('');
     });
