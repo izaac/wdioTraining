@@ -16,6 +16,8 @@ const overrides = {
       platform: 'Windows 10',
       name: 'Edge Win10: test flight search',
       screenResolution: '1280x960',
+      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+      startConnect: false,
     },
     //{
     // browserName: 'safari',
@@ -30,6 +32,8 @@ const overrides = {
       platform: 'Linux',
       name: 'Firefox Linux: test flight search',
       screenResolution: '1024x768',
+      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+      startConnect: false,
     },
     {
       browserName: 'firefox',
@@ -37,6 +41,8 @@ const overrides = {
       platform: 'macOS 10.12',
       name: 'Firefox OSX: test flight search',
       screenResolution: '1280x960',
+      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+      startConnect: false,
     },
     {
       browserName: 'chrome',
@@ -44,6 +50,8 @@ const overrides = {
       platform: 'macOS 10.12',
       name: 'Chrome OSX: test flight search',
       screenResolution: '1280x960',
+      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+      startConnect: false,
     },
     {
       browserName: 'chrome',
@@ -51,6 +59,8 @@ const overrides = {
       platform: 'Windows 10',
       name: 'Chrome Win10: test flight search',
       screenResolution: '1280x960',
+      tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+      startConnect: false,
     },
   ],
 };
