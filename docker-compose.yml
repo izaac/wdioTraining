@@ -1,0 +1,22 @@
+version: '2.1'
+
+networks:
+  outside:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+      - subnet: 192.168.1.0/24
+
+services:
+  selenium:
+      image: "selenium/standalone-chrome-debug"
+      expose:
+        - "4444"
+        - "5900"
+      ports:
+        - "4444:4444"
+        - "5900:5900"
+      networks:
+        outside:
+          ipv4_address: 192.168.1.99
