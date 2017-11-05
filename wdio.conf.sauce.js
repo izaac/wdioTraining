@@ -17,7 +17,7 @@ const overrides = {
       name: 'Edge Win10: test flight search',
       screenResolution: '1280x960',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-      build: process.env.TRAVIS_BUILD_NUMBER
+      build: process.env.TRAVIS_BUILD_NUMBER,
     },
     //{
     // browserName: 'safari',
@@ -33,7 +33,7 @@ const overrides = {
       name: 'Firefox Linux: test flight search',
       screenResolution: '1024x768',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-      build: process.env.TRAVIS_BUILD_NUMBER
+      build: process.env.TRAVIS_BUILD_NUMBER,
     },
     {
       browserName: 'firefox',
@@ -42,7 +42,7 @@ const overrides = {
       name: 'Firefox OSX: test flight search',
       screenResolution: '1280x960',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-      build: process.env.TRAVIS_BUILD_NUMBER
+      build: process.env.TRAVIS_BUILD_NUMBER,
     },
     {
       browserName: 'chrome',
@@ -51,7 +51,7 @@ const overrides = {
       name: 'Chrome OSX: test flight search',
       screenResolution: '1280x960',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-      build: process.env.TRAVIS_BUILD_NUMBER
+      build: process.env.TRAVIS_BUILD_NUMBER,
     },
     {
       browserName: 'chrome',
@@ -60,7 +60,7 @@ const overrides = {
       name: 'Chrome Win10: test flight search',
       screenResolution: '1280x960',
       'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER,
-      build: process.env.TRAVIS_BUILD_NUMBER
+      build: process.env.TRAVIS_BUILD_NUMBER,
     },
   ],
 };
