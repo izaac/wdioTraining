@@ -207,25 +207,25 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-  before (capabilities, specs) {
-        let chai = require('chai');
-        let chaiWebdriver = require('chai-webdriverio').default;
-        chai.use(chaiWebdriver(browser));
-    
-        global.expect = chai.expect;
-        global.assert = chai.assert;
+  before(capabilities, specs) {
+    const chai = require('chai');
+    const chaiWebdriver = require('chai-webdriverio').default;
+    chai.use(chaiWebdriver(browser));
 
-        require('babel-core/register')
-    },
+    global.expect = chai.expect;
+    global.assert = chai.assert;
+
+    require('babel-core/register');
+
+    if (capabilities.browserName !== 'chrome') browser.windowHandleMaximize();
+  },
   //
   /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
      */
-  beforeSuite (suite) {
-      if (browser.config.capabilities[0].browserName !== 'chrome')
-        browser.windowHandleMaximize();
-    },
+  // beforeSuite(suite) {
+  // },
   /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
