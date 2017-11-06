@@ -14,7 +14,8 @@ function getScreenshotName(basePath) {
 }
 
 exports.config = {
-
+  // debug: true,
+  // execArgv: ['--inspect=127.0.0.1:5859'],
   //
   // ==================
   // Specify Test Files
@@ -206,6 +207,7 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
   before(capabilities, specs) {
+    /* eslint-disable global-require */
     const chai = require('chai');
     const chaiWebdriver = require('chai-webdriverio').default;
     chai.use(chaiWebdriver(browser));
@@ -213,16 +215,18 @@ exports.config = {
     global.expect = chai.expect;
     global.assert = chai.assert;
 
-    require('babel-core/register')
+    require('babel-core/register');
+    /* eslint-disable global-require */
+
+    if (capabilities.browserName !== 'chrome') browser.windowHandleMaximize();
   },
   //
   /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
      */
-  beforeSuite(suite) {
-    browser.windowHandleMaximize();
-  },
+  // beforeSuite(suite) {
+  // },
   /**
      * Hook that gets executed _before_ a hook within the suite starts (e.g. runs before calling
      * beforeEach in Mocha)
