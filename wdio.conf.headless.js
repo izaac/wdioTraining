@@ -94,7 +94,7 @@ exports.config = {
   //
   // Set a base URL in order to shorten url command calls. If your url parameter starts
   // with "/", then the base url gets prepended.
-  baseUrl: 'https://www.orbitz.com',
+  baseUrl: 'https://www.wikipedia.org',
   //
   // Default timeout for all waitFor* commands.
   waitforTimeout: 20000,
@@ -216,8 +216,6 @@ exports.config = {
     global.assert = chai.assert;
 
     require('babel-core/register');
-
-    if (capabilities.browserName !== 'chrome') browser.windowHandleMaximize();
   },
   //
   /**
