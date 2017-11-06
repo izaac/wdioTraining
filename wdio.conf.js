@@ -207,6 +207,7 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
   before(capabilities, specs) {
+    /* eslint-disable global-require */
     const chai = require('chai');
     const chaiWebdriver = require('chai-webdriverio').default;
     chai.use(chaiWebdriver(browser));
@@ -215,6 +216,7 @@ exports.config = {
     global.assert = chai.assert;
 
     require('babel-core/register');
+    /* eslint-disable global-require */
 
     if (capabilities.browserName !== 'chrome') browser.windowHandleMaximize();
   },
