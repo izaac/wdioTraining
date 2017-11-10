@@ -27,7 +27,7 @@
     "wdio-screenshot": "^0.6.0",
     "wdio-selenium-standalone-service": "0.0.9",
     "wdio-visual-regression-service": "^0.8.0",
-    "webdriverio": "4.8.0"
+    "webdriverio": "^4.9.6"
   },
   "scripts": {
     "test": "./node_modules/.bin/wdio wdio.conf.js",
