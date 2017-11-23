@@ -15,7 +15,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
-    "chai": "^4.0.2",
+    "chai": "^4.1.2",
     "chai-webdriverio": "^0.4.3",
     "lodash": "^4.17.4",
     "selenium-standalone": "^6.11.0",
