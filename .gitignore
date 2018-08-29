@@ -2,6 +2,7 @@
 node_modules/
 outputDir/*
 errorShots/*
+output/*
 allure-results/*
 screenshots/*
 .idea/
